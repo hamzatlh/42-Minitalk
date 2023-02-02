@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htalhaou <htalhaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 01:22:39 by htalhaou          #+#    #+#             */
-/*   Updated: 2023/02/02 16:13:26 by htalhaou         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:11:59 by htalhaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "minitalk_bonus.h"
 
 void	sig_handler(int signum, siginfo_t *info, void *upp)
 {
@@ -33,6 +33,8 @@ void	sig_handler(int signum, siginfo_t *info, void *upp)
 	{
 		write(1, &c, 1);
 		countbit = 0;
+		if (c == '\0')
+			kill(pid, SIGUSR2);
 	}
 }
 

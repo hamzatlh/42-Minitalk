@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htalhaou <htalhaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 01:22:43 by htalhaou          #+#    #+#             */
-/*   Updated: 2023/02/02 16:19:46 by htalhaou         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:12:08 by htalhaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "minitalk_bonus.h"
 
 int	ft_atoi(const char *str)
 {
@@ -71,10 +71,17 @@ void	send_string(char *str, int pid)
 	send_character('\0', pid);
 }
 
+void	hand_msg(int sig)
+{
+	(void)sig;
+	write(1, "message recieved\n", 17);
+}
+
 int	main(int ac, char **av)
 {
 	int	pid;
 
+	signal(SIGUSR2, &hand_msg);
 	if (ac != 3)
 		return (0);
 	pid = ft_atoi(av[1]);
