@@ -6,7 +6,7 @@
 /*   By: htalhaou <htalhaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 01:22:43 by htalhaou          #+#    #+#             */
-/*   Updated: 2023/02/02 18:30:29 by htalhaou         ###   ########.fr       */
+/*   Updated: 2023/02/02 22:58:34 by htalhaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	send_string(char *str, int pid)
 void	hand_msg(int sig)
 {
 	(void)sig;
-	write(1, "message recieved\n", 17);
+	ft_printf("message recieved\n");
 }
 
 int	main(int ac, char **av)
