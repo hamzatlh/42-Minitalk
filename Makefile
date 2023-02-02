@@ -6,7 +6,7 @@
 #    By: htalhaou <htalhaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 22:54:28 by htalhaou          #+#    #+#              #
-#    Updated: 2023/02/02 16:19:04 by htalhaou         ###   ########.fr        #
+#    Updated: 2023/02/02 18:30:53 by htalhaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,14 +33,14 @@ bonus: $(NAME_SERVER_BONUS) $(NAME_CLIENT_BONUS)
 $(NAME_CLIENT): client.c $(PRINTF)
 	$(CC) $(CFLAGS) client.c $(PRINTF) -o $(NAME_CLIENT)
 
-$(NAME_CLIENT_BONUS): client.c $(PRINTF)
-	$(CC) $(CFLAGS) client.c $(PRINTF) -o $(NAME_CLIENT_BONUS)
+$(NAME_CLIENT_BONUS): client_bonus.c $(PRINTF)
+	$(CC) $(CFLAGS) client_bonus.c $(PRINTF) -o $(NAME_CLIENT_BONUS)
 
 $(NAME_SERVER): server.c $(PRINTF)
 	$(CC) $(CFLAGS) server.c $(PRINTF) -o $(NAME_SERVER)
 
-$(NAME_SERVER_BONUS): server.c $(PRINTF)
-	$(CC) $(CFLAGS) server.c $(PRINTF) -o $(NAME_SERVER_BONUS)
+$(NAME_SERVER_BONUS): server_bonus.c $(PRINTF)
+	$(CC) $(CFLAGS) server_bonus.c $(PRINTF) -o $(NAME_SERVER_BONUS)
 
 $(PRINTF): 
 	@make -C ft_printf/
