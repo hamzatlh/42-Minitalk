@@ -6,14 +6,14 @@
 /*   By: htalhaou <htalhaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 15:55:03 by htalhaou          #+#    #+#             */
-/*   Updated: 2023/02/02 16:17:22 by htalhaou         ###   ########.fr       */
+/*   Updated: 2023/02/05 22:42:27 by htalhaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINITALK_BONUS_H
 # define MINITALK_BONUS_H
 
-# include "../ft_printf/ft_printf.h"
+# include "ft_printf/ft_printf.h"
 # include<unistd.h>
 # include<signal.h>
 # include<stdlib.h>
